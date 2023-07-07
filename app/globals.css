@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+label {
+  @apply text-lg font-semibold
+  text-teal-900
+  m-1;
+}
+
+input,
+select {
+  @apply p-3 m-1
+ font-medium 
+  text-teal-900 bg-white
+  rounded-lg focus:outline-none
+  transition-all duration-300 ease-in-out
+  border-teal-500 border-2 focus:border-teal-700;
+}
+
+button {
+  background-image: linear-gradient(#09ba96, #0ca0b1);
+
+  @apply text-white font-semibold
+  rounded-lg
+  overflow-hidden
+  m-1 px-7 py-3
+  transition-all duration-300 ease-in-out
+   hover:bg-teal-700;
+}
+
+table {
+  @apply w-full
+  /* border-collapse */
+  overflow-hidden
+  rounded
+  /* border-2 border-teal-700; */;
+}
+
+/* thead {
+  @apply sticky top-0;
+} */
+
+/* tbody {
+  @apply h-96 overflow-y-auto;
+} */
+
+th {
+  @apply text-white text-lg font-semibold text-center
+  border-2 border-teal-500 rounded
+  bg-teal-700
+  p-1;
+}
+tr {
+  @apply odd:bg-slate-50 even:bg-white;
+}
+
+td {
+  @apply text-teal-900 
+  border-2 border-teal-700
+  text-center text-lg
+  p-1;
+}
+
+.theme-gradient {
+  background-image: linear-gradient(#09ba96, #0ca0b1);
+}
+
+.smooth-transition {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  @apply w-1;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-50;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-500;
+}
