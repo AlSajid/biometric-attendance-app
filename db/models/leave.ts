@@ -1,14 +1,14 @@
-import mongoose from "mongoose";
+import { models, model, Schema } from 'mongoose'
 
-const leaveSchema = new mongoose.Schema(
+const leaveSchema = new Schema(
 	{
-		id: {type: String},
-		start: {type: Date},
-		end: {type: Date},
-		leaveType: {type: String}
+		id: { type: String },
+		start: { type: Date },
+		end: { type: Date },
+		leaveType: { type: String }
 	},
-	{versionKey: false}
-);
+	{ versionKey: false }
+)
 
-const Leave = mongoose.models.Leave || mongoose.model("Leave", leaveSchema);
-export default Leave;
+const Leave = model('Leave', leaveSchema)
+export default Leave

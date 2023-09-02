@@ -1,11 +1,14 @@
-import { models, model, Schema } from 'mongoose';
+import { models, model, Schema } from 'mongoose'
 
-const hoursSchema = new Schema({
-    start: { type: String, },
-    late: { type: String, },
-    end: { type: String,  },
-});
+const hoursSchema = new Schema(
+	{
+		start: { type: String },
+		late: { type: String },
+		end: { type: String }
+	},
+	{ versionKey: false }
+)
 
-const Hours = models.Hours || model('Hours', hoursSchema);
+const Hours = model('Hours', hoursSchema)
 
-export default Hours;
+export default Hours

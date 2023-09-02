@@ -1,12 +1,12 @@
-import mongoose from "mongoose";
+import { models, model, Schema } from 'mongoose'
 
-const leaveTypeSchema = new mongoose.Schema(
+const leaveTypeSchema = new Schema(
 	{
-		type: {type: String, unique: true},
-		count: {type: Number}
+		type: { type: String, unique: true },
+		count: { type: Number }
 	},
-	{versionKey: false}
-);
+	{ versionKey: false }
+)
 
-const LeaveType = mongoose.models.LeaveType || mongoose.model("LeaveType", leaveTypeSchema);
-export default LeaveType;
+const LeaveType = model('LeaveType', leaveTypeSchema)
+export default LeaveType
